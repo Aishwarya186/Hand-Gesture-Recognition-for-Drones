@@ -36,7 +36,6 @@ Applied OpenPose on the whole video dataset. OpenPose is capable of outputiing a
 ### 3. Basic data preprocessing:
 As we are using a labelled dataset, we loaded the train, test and validation .csv files with a video-label format for the train and validation dataset and just the video names for the test dataset.
 We then converted these big json files into numpy arrays in order to make the computation for the LSTM classifier easy.
-Data Preprocessing.ipynb
 
 ### 4. Train the LSTM classifier:
 Considered 120 videos for training, 29 for validation and 29 for testing.
