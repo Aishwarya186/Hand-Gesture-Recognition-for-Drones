@@ -50,11 +50,17 @@ Iter: 512,  Accuracy test: 1.0, Accuracy train: 0.255859375, time: 2.96636533737
 
 ## Approach 2:
 Image classification approach with fast.ai
-We changed the way we modeled and preprocessed our data.
+
 Dataset link:
 https://drive.google.com/file/d/1ZXRQK7WM_7VXHiE8ao5FeDbrZfUl1x8C/view?usp=sharing
-As motion gestures is a challenge we are facing, we decided to take it step by step and try the basic approach of steady gesture recognition and classification. Hence, we modified our dataset wherein we clubbed all the frames of the videos representing the same gesture into a single folder and labeled the folder with the gesture name.
-We then used fast.ai for easy classification methods. With this method we obtained an accuracy of 0.78
+
+As motion gestures is a challenge we are facing, we decided to take it step by step and try the basic approach of steady gesture recognition and classification.
+Before any work can be done a dataset needs to be converted into a DataBunch object, and in the case of the computer vision data - specifically into an ImageDataBunch subclass. Since our images are placed in folders whose names correspond to the image labels, we will use the ImageDataBunch.from_folder() function to create an object that contains our image data. This is super useful and makes it incredibly easy to read the data into our model.
+Fast.ai can automatically split our data into train and validation sets, so we don't even need to create these on our own.
+The only hyperparameters we need are the path-variable pointing to our data set, the size of the inputs and the batch size for each gradient descent iteration.
+The function argument called get_transforms() which returns a list of available image transformations upon call.
+The parameter valid_pct which controls the percentage of images that will be randomly chosen to be in the validation set.
+With this method we obtained an accuracy of 0.78
 
 
 ## Conclusion:
