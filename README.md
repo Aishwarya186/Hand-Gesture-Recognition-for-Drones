@@ -50,3 +50,8 @@ Iter: 512,  Accuracy test: 1.0, Accuracy train: 0.255859375, time: 2.96636533737
 Image classification approach with fast.ai
 We changed the way we modeled and preprocessed our data. As motion gestures is a challenge we are facing, we decided to take it step by step and try the basic approach of steady gesture recognition and classification. Hence we modified our dataset wherein we clubbed all the frames of the videos representing the same gesture into a single folder and labeled the folder with the gesture name.
 We then used fast.ai for easy classification methods. With this method we obtained an accuracy of 0.78
+
+
+## Conclusion:
+There is still so much to work on and improve in order to get to the goal we set. We aim to work on the OpenPose - LSTM approach and improve our model in order to get better results.
+We intend to explore different analytical and empirical approaches to solve this problem more efficiently. One of the starting point could be implementing a reinforcement learning aprroach or using a sliding window approach on a group of labeled frames in the dataset to serve the purpose of motion geature recognition.
