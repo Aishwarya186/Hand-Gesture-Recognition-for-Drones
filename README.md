@@ -7,14 +7,16 @@ We are using 4 basic motion gestures in this project to be recognized and classi
 
 For this vision-based drone controlling system, we have implemented the following procedure:
 
-## Dataset
-
+## Dataset:
 We created a dataset with 178 videos where each video contains one gesture. We have created this dataset keeping in mind the angle from which the drone would be viewing the human responsible to give gesture commands in order to get the full impact of the drone captures. We have considered 4 different body types in our dataset and have made variations in the angles and the distances from which the videos were captured. These videos have been recorded from our cellphones (iPhone, Pixel and OnePlus for different resolutions and quality).
 The 4 gestures we are considering in this project are:
 1. Target
 2. Forward
 3. Descend
 4. Stop
+
+Dataset link:
+https://drive.google.com/file/d/1EAHHvDdLDwlT0E0jBlWKs7h8cLhmu7nf/view?usp=sharing
 
 ## Approach 1:
 Instead of making a classifier from the ground up, we decided to use the OpenPose posture recognition framework from Carnegie Mellon University's Perceptual Computing Lab for representation. Using the body model, OpenPose allowed us to extract the body pose keypoints from videos or images.
@@ -48,7 +50,10 @@ Iter: 512,  Accuracy test: 1.0, Accuracy train: 0.255859375, time: 2.96636533737
 
 ## Approach 2:
 Image classification approach with fast.ai
-We changed the way we modeled and preprocessed our data. As motion gestures is a challenge we are facing, we decided to take it step by step and try the basic approach of steady gesture recognition and classification. Hence, we modified our dataset wherein we clubbed all the frames of the videos representing the same gesture into a single folder and labeled the folder with the gesture name.
+We changed the way we modeled and preprocessed our data.
+Dataset link:
+https://drive.google.com/file/d/1ZXRQK7WM_7VXHiE8ao5FeDbrZfUl1x8C/view?usp=sharing
+As motion gestures is a challenge we are facing, we decided to take it step by step and try the basic approach of steady gesture recognition and classification. Hence, we modified our dataset wherein we clubbed all the frames of the videos representing the same gesture into a single folder and labeled the folder with the gesture name.
 We then used fast.ai for easy classification methods. With this method we obtained an accuracy of 0.78
 
 
